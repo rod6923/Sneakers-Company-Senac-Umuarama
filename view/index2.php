@@ -123,7 +123,128 @@ border: 2px solid;
       </div>
 
 
+      <?php
+include("../service/conexao.php"); // Inclua sua conexão com o banco de dados
 
+// Busque as imagens e legendas do banco de dados
+$sql_query = $conn->prepare("SELECT * FROM arquivos");
+$sql_query->execute();
+$imgrepositorio = $sql_query->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Imagens</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> <!-- Link para a fonte Poppins -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .carousel-container {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            margin: auto;
+        }
+        .carousel {
+          margin-top: 150px;
+            display: flex;
+            transition: transform 0.5s ease;
+        
+            border-radius: 10px;
+        }
+        .post {
+            flex: 0 0 25%; /* 4 posts por linha */
+            box-sizing: border-box;
+            padding: 10px;
+            text-align: center;
+       
+        
+            margin: 10px; /* Margem entre os cards */
+            transition: transform 0.5s ease; /* Transição suave */
+        }
+        .post img {
+ 
+            max-width: 400px;
+            border-radius: 10px /* Bordas arredondadas na parte superior */
+        }
+        .caption {
+            margin-top: 5px;
+            font-family:  Arial, sans-serif; /* Aplica a fonte Poppins */
+            font-weight: 400; /* Peso da fonte */
+            padding: 10px; /* Espaçamento interno da legenda */
+            font-size: 18px; 
+            text-align: left;
+        }
+        .controls {
+            position: absolute;
+            top: 50%;
+            
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+          
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="carousel-container">
+    <div class="carousel" id="carousel" data-aos="fade-up">
+        <?php foreach ($imgrepositorio as $post): ?>
+            <div class="post" id="post-<?php echo $post['id']; ?>">
+                <img src="<?php echo htmlspecialchars($post['path']); ?>" alt="<?php echo htmlspecialchars($post['nome']); ?>">
+                <div class="caption"><?php echo htmlspecialchars($post['legenda']); ?></div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+    <div class="controls">
+        <button class="button" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="button" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+</div>
+
+<script>
+    let currentSlide = 0;
+
+    function moveSlide(direction) {
+        const totalSlides = document.querySelectorAll('.post').length;
+
+        currentSlide += direction;
+
+        // Loop back to the start or end
+        if (currentSlide < 0) {
+            currentSlide = totalSlides - 1; // Último
+        }
+        if (currentSlide >= totalSlides) {
+            currentSlide = 0; // Primeiro
+        }
+
+        // Calcular o deslocamento
+        const offset = currentSlide * -25; // 25% para cada post
+        document.getElementById('carousel').style.transform = `translateX(${offset}%)`;
+    }
+</script>
+
+</body>
+</html>
       
   <!-- Section-->
 

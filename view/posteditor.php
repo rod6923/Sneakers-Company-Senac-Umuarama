@@ -30,7 +30,6 @@ input[type='file'] {
   display: none
 }
 
-/* Aparência que terá o seletor de arquivo */
 label {
   background-color: #DC4C64;
   border-radius: 5px;
@@ -75,10 +74,71 @@ align-self: center;
     include "navbar5.php";
     ?>
 
-<div class="post">
+
+
+<form method="POST" enctype="multipart/form-data" action="">
+      <div class="post">
 <label for='selecao-arquivo'><i class=" fa-solid fa-plus" style="color: #ffffff"; ></i></label>
-<input id='selecao-arquivo' type='file'>
+<input id='selecao-arquivo' name="imgrepositorio" type='file'>
 <p> insira sua foto aqui </p>
 </div>
+        <p>
+            <label for="">legenda</label>
+            <input name="legenda" type="text" required>
+        </p>
+        <button type="submit">Enviar</button>
+    </form>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <?php
+include("../service/conexao.php");
+
+if (isset($_FILES['imgrepositorio'])) {
+    $imgrepositorio = $_FILES['imgrepositorio'];
+    $legenda = $_POST['legenda'];
+    if($imgrepositorio['error'])
+        die("Falha ao enviar");
+
+    if($imgrepositorio['size'] > 2097152)
+        die("Arquivo muito grande");
+
+    echo "arquivo enviado";
+    $pasta = "imgrepositorio/";
+    $nomeDoArquivo = $imgrepositorio['name'];
+    $novoNomeDoArquivo = uniqid();
+    $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));
+
+    if($extensao != "jpg" && $extensao != 'png')
+        die("Formato de arquivo não permitido");
+
+    $path = $pasta . $novoNomeDoArquivo . "." . $extensao;
+    $deu_certo = move_uploaded_file($imgrepositorio["tmp_name"], $path);
+    
+    if($deu_certo) {
+        $conn->query("INSERT INTO arquivos (nome, path, legenda) VALUES('$nomeDoArquivo', '$path', '$legenda')") or die ($mysqli->error);
+        echo "<p>Arquivo movido com sucesso</p>"; 
+    } else {
+        echo "<p>Falha ao mover o arquivo</p>";
+    }
+}
+
+$sql_query = $conn->prepare("SELECT * FROM arquivos");
+$sql_query->execute();
+$imgrepositorio = $sql_query->fetchAll(PDO::FETCH_ASSOC);
+?> 
+
