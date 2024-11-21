@@ -135,15 +135,15 @@ rel="stylesheet"
                   <p>Não possui uma conta?</p>
                   <a href="cadastro.php"><button type="button" class="btn bg-red-500" > Cadastrar-se</button></a>
                   <br><br>
-                  <button type="button" class="btn bg-red-500 btn-floating mx-1">
+                  <button type="button" class="btn btn-floating mx-1">
                     <i class="fab fa-facebook-f"></i>
                   </button>
   
-                  <button type="button" class="btn bg-red-500 btn-floating mx-1">
+                  <button type="button" class="btn btn-floating mx-1">
                     <i class="fab fa-google"></i>
                   </button>
   
-                  <button type="button" class="btn bg-red-500 btn-floating mx-1">
+                  <button type="button" class="btn btn-floating mx-1">
                     <i class="fab fa-twitter"></i>
                   </button>
   

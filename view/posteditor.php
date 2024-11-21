@@ -26,6 +26,44 @@
 </head>
 <body>
 <style>
+
+img{
+  pointer-events: none;
+}
+.btn-danger{
+  background-color:#dc4c64;
+
+}
+
+.btn-outline-danger:hover{
+  background-color:#dc4c64;
+}
+.card2{
+transition:all 0.5s;
+  
+}
+.card2:hover{
+border:1px solid;
+border-color : #DC4C64;
+cursor: pointer;
+
+}
+a{
+text-decoration:none;
+color: #DC4C64;
+}
+i{
+color: #DC4C64;
+}
+.btn-outline-danger{
+border-color: #dc4c64;
+border: 2px solid;
+} 
+.text-red{
+  color:#dc4c64;!important
+}
+</style>
+<style>
 input[type='file'] {
   display: none
 }
