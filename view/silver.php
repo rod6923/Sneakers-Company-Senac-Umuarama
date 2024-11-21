@@ -53,7 +53,7 @@
                     <p class="lead">Seja você um saltador do tipo enterrada ou uma maravilha abaixo da cesta vagando pela linha de base, sinta-se mais rápido, mais baixo na quadra e seguro no LeBron NXXT Gen. Nós o adaptamos especificamente para atender às demandas do ritmo acelerado de hoje jogo, para que você possa ficar à frente da oposição com sua velocidade e força em todas as direções.</p>
                     <div class="d-flex">
                         <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-                        <a href="cart.php"><button class="btn btn-outline-danger flex-shrink-0 rounded-pill" type="button">
+                        <a href="https://droper.app/d/4827/Nike_Zoom_LeBron_NXXT_Gen_White"><button class="btn btn-outline-danger flex-shrink-0 rounded-pill" type="button">
                             <i class="bi-cart-fill me-1 text-danger"></i>
                             Onde comprar?
                         </button></a>
@@ -82,7 +82,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="super.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="super.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="thunder.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="thunder.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>
@@ -130,7 +130,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="fint.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="fint.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>
@@ -153,7 +153,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="mid.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="mid.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>

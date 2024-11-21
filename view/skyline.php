@@ -53,7 +53,7 @@
                     <p class="lead">Chame a atenção do amanhecer ao anoitecer no Air Jordan 1. O denim premium na parte superior é tingido com um gradiente de claro a escuro, mudando perfeitamente de alpenglow para crepúsculo. O design assimétrico permite que você crie uma atmosfera própria - e o toque final? O amortecimento Nike Air sob os pés permite que você leve seu jogo para qualquer lugar com conforto. O céu é o limite com este.</p>
                     <div class="d-flex">
                         <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-                        <a href="cart.php"><button class="btn btn-outline-danger flex-shrink-0 rounded-pill" type="button">
+                        <a href="https://droper.app/d/4716/Air_Jordan_1_High_Skyline"><button class="btn btn-outline-danger flex-shrink-0 rounded-pill" type="button">
                             <i class="bi-cart-fill me-1 text-danger"></i>
                             Onde comprar?
                         </button></a>
@@ -82,7 +82,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="campos.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="campos.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="super.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="super.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>
@@ -130,7 +130,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="foruns.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="foruns.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>
@@ -153,7 +153,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="mid.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="mid.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>

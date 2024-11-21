@@ -55,7 +55,7 @@
                     <p class="lead">Em uma homenagem ao 25° aniversário da assinatura. O novo modelo remete ao “Flint Grey” lançado originalmente em 1998. A construção atualizada traz uma colorway que substitui o azul do modelo anterior pelo preto, que surge no cabedal tendo como base o cinza em camurça e o branco em couro. O modelo também conta com detalhe vermelho no logo Jumpman e malha reflexiva 3M.</p>
                     <div class="d-flex">
                         <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-                        <a href="cart.php"><button class="btn btn-outline-danger flex-shrink-0 rounded-pill" type="button">
+                        <a href="https://droper.app/d/5093/Air_Jordan_13_Black_Flint"><button class="btn btn-outline-danger flex-shrink-0 rounded-pill" type="button">
                             <i class="bi-cart-fill me-1 text-danger"></i>
                             Onde comprar?
                         </button></a>
@@ -85,7 +85,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="next.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="next.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>
@@ -111,7 +111,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="elevateblue.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="elevateblue.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>
@@ -133,7 +133,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="foruns.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="foruns.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>
@@ -156,7 +156,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="silver.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="silver.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>

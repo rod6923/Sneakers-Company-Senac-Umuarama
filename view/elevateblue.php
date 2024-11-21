@@ -55,7 +55,7 @@
                     <p class="lead">Esteja à altura da ocasião em grande estilo. Este tênis retrabalha a magia original de um ícone com uma sola de plataforma e silhueta de corte baixo. O amortecimento a ar mantém você levantado e o couro elegante em cores contrastantes adiciona interesse visual.</p>
                     <div class="d-flex">
                         <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-                        <a href="cart.php"><button class="btn btn-outline-danger flex-shrink-0 rounded-pill" type="button">
+                        <a href="https://droper.app/d/4830/Air_Jordan_1_Elevate_Low_French_Blue"><button class="btn btn-outline-danger flex-shrink-0 rounded-pill" type="button">
                             <i class="bi-cart-fill me-1 text-danger"></i>
                             Onde comprar?
                         </button></a>
@@ -85,7 +85,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="campos.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="campos.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>
@@ -111,7 +111,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="super.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="super.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>
@@ -133,7 +133,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="foruns.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="foruns.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>
@@ -156,7 +156,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="mid.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>

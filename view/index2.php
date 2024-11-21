@@ -268,7 +268,7 @@ $imgrepositorio = $sql_query->fetchAll(PDO::FETCH_ASSOC);
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent ">
-                        <div class="text-center"><a class="btn btn-outline-danger rounded-pill mt-auto" href="bigbubble.php">Comprar</a></div>
+                        <div class="text-center"><a class="btn btn-outline-danger rounded-pill mt-auto" href="bigbubble.php">Ver Mais</a></div>
                     </div>
                 </div>
             </div>
@@ -292,7 +292,7 @@ $imgrepositorio = $sql_query->fetchAll(PDO::FETCH_ASSOC);
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-danger rounded-pill mt-auto " href="j2chicago.php">Comprar</a></div>
+                        <div class="text-center"><a class="btn btn-outline-danger rounded-pill mt-auto " href="j2chicago.php">Ver Mais</a></div>
                     </div>
                 </div>
             </div>
@@ -312,7 +312,7 @@ $imgrepositorio = $sql_query->fetchAll(PDO::FETCH_ASSOC);
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-danger rounded-pill mt-auto" href="elevateblue.php">Comprar</a></div>
+                        <div class="text-center"><a class="btn btn-outline-danger rounded-pill mt-auto" href="elevateblue.php">Ver Mais</a></div>
                     </div>
                 </div>
             </div>
@@ -334,7 +334,7 @@ $imgrepositorio = $sql_query->fetchAll(PDO::FETCH_ASSOC);
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-danger rounded-pill mt-auto" href="next.php">Comprar</a></div>
+                        <div class="text-center"><a class="btn btn-outline-danger rounded-pill mt-auto" href="next.php">Ver Mais</a></div>
                     </div>
                 </div>
             </div>
@@ -354,7 +354,7 @@ $imgrepositorio = $sql_query->fetchAll(PDO::FETCH_ASSOC);
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-danger rounded-pill mt-auto" href="but.php">Comprar</a></div>
+                        <div class="text-center"><a class="btn btn-outline-danger rounded-pill mt-auto" href="but.php">Ver Mais</a></div>
                     </div>
                 </div>
             </div>
@@ -372,7 +372,7 @@ $imgrepositorio = $sql_query->fetchAll(PDO::FETCH_ASSOC);
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-danger rounded-pill mt-auto" href="pine.php">Comprar</a></div>
+                        <div class="text-center"><a class="btn btn-outline-danger rounded-pill mt-auto" href="pine.php">Ver Mais</a></div>
                     </div>
                 </div>
             </div>
@@ -397,7 +397,7 @@ $imgrepositorio = $sql_query->fetchAll(PDO::FETCH_ASSOC);
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-danger rounded-pill mt-auto" href="skyline.php">Comprar</a></div>
+                        <div class="text-center"><a class="btn btn-outline-danger rounded-pill mt-auto" href="skyline.php">Ver Mais</a></div>
                     </div>
                 </div>
             </div>
@@ -419,7 +419,7 @@ $imgrepositorio = $sql_query->fetchAll(PDO::FETCH_ASSOC);
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-danger rounded-pill mt-auto" href="silver.php">Comprar</a></div>
+                        <div class="text-center"><a class="btn btn-outline-danger rounded-pill mt-auto" href="silver.php">Ver Mais</a></div>
                     </div>
                 </div>
             </div>

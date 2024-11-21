@@ -53,7 +53,7 @@
                     <p class="lead">Para sua mais recente parceria, a BAPE envolve o adidas Forum Low em sua assinatura ABC Camo em duas cores. A segunda colorway é decorada em vários tons de azul, com detalhes prateados nas línguas e fechos de renda de metal. Ambos os pares são empilhados sobre entressolas adidas na cor creme e solas de borracha azul ou verde.</p>
                     <div class="d-flex">
                         <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-                         <a href="cart.php"><button class="btn btn-outline-danger flex-shrink-0 rounded-pill" type="button">
+                         <a href="https://droper.app/d/5196/BAPE_x_adidas_Forum_84_Low_30th_Anniversary_Blue"><button class="btn btn-outline-danger flex-shrink-0 rounded-pill" type="button">
                             <i class="bi-cart-fill me-1 text-danger"></i>
                             Onde comprar?
                         </button></a>
@@ -82,7 +82,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="next.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="next.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="elevateblue.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="elevateblue.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>
@@ -130,7 +130,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="pine.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="pine.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>
@@ -153,7 +153,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="silver.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="silver.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>

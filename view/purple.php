@@ -53,10 +53,10 @@
                         <p class="lead">Court Purple é uma cor tradicional da marca Jordan, vista em muitos estilos ao longo dos anos, e está finalmente deixando sua marca no Air Jordan 13. Feito para todas as especificações OG, este Air Jordan 13 apresenta o holograma clássico de olho de gato, uma parte superior em tecido reflexivo e uma entressola Court Purple embrulhada. Como uma nova reviravolta na composição Air Jordan 13 original, a ousada cor Court Purple rouba a cena para um visual moderno.</p>
                         <div class="d-flex">
                             <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-                            <button class="btn btn-outline-dark flex-shrink-0 butao" type="button">
-                                <i class="bi-cart-fill me-1"></i>
-                                Adicionar no Carrinho
-                            </button>
+                            <a href="https://droper.app/d/1716/Air_Jordan_13_Court_Purple"><button class="btn btn-outline-danger flex-shrink-0 rounded-pill" type="button">
+                            <i class="bi-cart-fill me-1 text-danger"></i>
+                            Onde comprar?
+                            </button></a>
                         </div>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="silver.php">Comprar</a></div>
+                                <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="silver.php">Ver Mais</a></div>
                             </div>
                         </div>
                     </div>
@@ -108,7 +108,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="skyline.php">Comprar</a></div>
+                                <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="skyline.php">Ver Mais</a></div>
                             </div>
                         </div>
                     </div>
@@ -130,7 +130,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="fint.php">Comprar</a></div>
+                                <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="fint.php">Ver Mais</a></div>
                             </div>
                         </div>
                     </div>
@@ -153,7 +153,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="mid.php">Comprar</a></div>
+                                <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="mid.php">Ver Mais</a></div>
                             </div>
                         </div>
                     </div>

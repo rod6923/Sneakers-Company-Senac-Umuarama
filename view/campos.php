@@ -54,7 +54,7 @@
                     <p class="lead">Este tênis adidas não apenas quebra as regras, mas as muda também. Com uma nova perspectiva para o Campus 80s, este tênis eleva o look colegial clássico com suede premium e tons desbotados no cabedal. A entressola off-white e as Três Listras emblemáticas remetem ao visual original, enquanto os cadarços em zigue-zague e os logos Y2K dão um toque moderno com uma vibe inspirada no skate.</p>
                     <div class="d-flex">
                         <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-                        <a href="cart.php"><button class="btn btn-outline-danger flex-shrink-0 rounded-pill" type="button">
+                        <a href="https://droper.app/d/5280/adidas_Campus_00s_Core_Black_Almost_Pink"><button class="btn btn-outline-danger flex-shrink-0 rounded-pill" type="button">
                             <i class="bi-cart-fill me-1 text-danger"></i>
                             Onde comprar?
                         </button></a>
@@ -86,7 +86,7 @@ Produtos relacionados
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="bigbubble.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="bigbubble.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>
@@ -112,7 +112,7 @@ Produtos relacionados
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="j2chicago.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="j2chicago.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>
@@ -134,7 +134,7 @@ Produtos relacionados
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="but.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="but.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>
@@ -157,7 +157,7 @@ Produtos relacionados
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="pine.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="pine.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>

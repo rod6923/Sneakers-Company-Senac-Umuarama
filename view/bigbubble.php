@@ -60,7 +60,7 @@
                     <p class="lead">Vestido com um esquema de cores branco, vermelho universitário e cinza natural claro. O lançamento retrô do Nike Air Max 1 OG “Big Bubble” também conhecido como “Big Window” retornará em sua construção original e bloqueio de cores. Este Nike Air Max 1 apresenta uma base de malha branca com sobreposições de camurça cinza e vermelha no topo de sua unidade Air maior e mais visível.</p>
                     <div class="d-flex">
                         <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-                        <a href="cart.php"><button class="btn btn-outline-danger flex-shrink-0 rounded-pill" type="button">
+                        <a href="https://droper.app/d/4693/Nike_Air_Max_1__86_Big_Bubble_Sport_Red"><button class="btn btn-outline-danger flex-shrink-0 rounded-pill" type="button">
                             <i class="bi-cart-fill me-1 text-danger"></i>
                             Onde comprar?
                         </button></a>
@@ -90,7 +90,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="campos.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="campos.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>
@@ -116,7 +116,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="super.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="super.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>
@@ -138,7 +138,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="foruns.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="foruns.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>
@@ -161,7 +161,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="mid.php">Comprar</a></div>
+                            <div class="text-center"><a class="btn btn-outline-danger flex-shrink-0" href="mid.php">Ver Mais</a></div>
                         </div>
                     </div>
                 </div>
