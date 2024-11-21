@@ -98,7 +98,7 @@ border: 2px solid;
     
     </div>
   <!-- Carousel wrapper -->
-  < <div id="carousellightVariant" class="carousel">
+   <div id="carousellightVariant" class="carousel">
           <!-- Inner -->
           <div class="container">
               <h3 class="title"></h3>
