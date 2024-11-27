@@ -103,7 +103,22 @@ margin-right: auto;
 text-align:center;
 align-self: center;
 }
+.legendas{
+  background-color: #DC4C64;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px;
+padding-top: 8px;
+padding-bottom:8px;
+width: 60px;
+  
+  margin-left: auto;
+  margin-right: auto;
 
+  align-justify-content: center;
+
+}
 
 </style>
 
@@ -116,17 +131,19 @@ align-self: center;
 
 <form method="POST" enctype="multipart/form-data" action="">
       <div class="post">
-<label for='selecao-arquivo'><i class=" fa-solid fa-plus" style="color: #ffffff"; ></i></label>
+<label for='selecao-arquivo'><i class=" aiai fa-solid fa-plus" style="color: #ffffff"; ></i></label>
 <input id='selecao-arquivo' name="imgrepositorio" type='file'>
 <p> insira sua foto aqui </p>
 </div>
+<div style="text-align: center;">
         <p>
-            <label for="">legenda</label>
+            <p for="" class="legendas">legenda</p>
+            <br>
             <input name="legenda" type="text" required>
         </p>
         <button type="submit">Enviar</button>
     </form>
-
+</div>
 </body>
 </html>
 
