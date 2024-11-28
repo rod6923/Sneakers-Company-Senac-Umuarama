@@ -22,6 +22,21 @@
   }  .navbar {
             box-shadow: none !important;
         }
+        .navbar-nav .nav-item {
+    display: flex;
+    align-items: center;  /* Alinha os itens verticalmente no centro */
+}
+
+.navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Garante que o conteúdo (ícone e texto) fique centralizado */
+}
+
+.navbar-nav .nav-link i {
+    margin-right: 5px; /* Espaço entre o ícone e o texto */
+}
+
       
 </style>
 </head>
@@ -65,13 +80,21 @@
         
   
         
-       
-            <li class="nav-item me-3 me-lg-1 active">
-            <a class="nav-link bnt-login" href="login.php">
-              <span><i class="fas fa-arrow-right-to-bracket fa-lg"></i></span>
-           
-            </a>
-          </li>
+        <li class="nav-item me-3 me-lg-1">
+    <?php if (isset($_SESSION['usuario_id'])): ?>
+        <!-- Botão de Logout -->
+        <a class="nav-link" href="logout.php">
+            <span><i class="fas fa-sign-out-alt fa-lg"></i></span> Sair
+        </a>
+    <?php else: ?>
+        <!-- Botão de Login -->
+        <a class="nav-link bnt-login" href="login.php">
+            <span><i class="fas fa-arrow-right-to-bracket fa-lg"></i></span> Login
+        </a>
+    <?php endif; ?>
+</li>
+
+
           <li class="nav-item me-3 me-lg-1 active">
           <a class="nav-link" href="posteditor.php">
             <span><i class="fas fa-plus fa-lg"></i></span>

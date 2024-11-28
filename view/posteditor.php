@@ -1,3 +1,56 @@
+<?php
+// Iniciar a sessão no início do arquivo
+session_start();
+include("../service/conexao.php");
+
+if (!isset($_SESSION['usuario_id'])) {
+    // Se o usuário não estiver logado, redireciona para o login
+    header('Location: login.php');
+    exit;
+}
+
+if (isset($_FILES['imgrepositorio'])) {
+    $imgrepositorio = $_FILES['imgrepositorio'];
+    $legenda = $_POST['legenda'];
+    
+    if ($imgrepositorio['error'])
+        die("Falha ao enviar");
+
+    if ($imgrepositorio['size'] > 2097152)
+        die("Arquivo muito grande");
+
+    echo "Arquivo enviado";
+    $pasta = "imgrepositorio/";
+    $nomeDoArquivo = $imgrepositorio['name'];
+    $novoNomeDoArquivo = uniqid();
+    $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));
+
+    if ($extensao != "jpg" && $extensao != 'png')
+        die("Formato de arquivo não permitido");
+
+    $path = $pasta . $novoNomeDoArquivo . "." . $extensao;
+    $deu_certo = move_uploaded_file($imgrepositorio["tmp_name"], $path);
+
+    if ($deu_certo) {
+        // Inserir o post com o ID do usuário
+        $usuario_id = $_SESSION['usuario_id']; // ID do usuário da sessão
+        $conn->query("INSERT INTO arquivos (usuario_id, nome, path, legenda) VALUES('$usuario_id', '$nomeDoArquivo', '$path', '$legenda')") or die ($mysqli->error);
+        echo "<p>Arquivo movido com sucesso</p>"; 
+    } else {
+        echo "<p>Falha ao mover o arquivo</p>";
+    }
+}
+
+// Recuperar os posts e os nomes dos usuários
+$sql_query = $conn->prepare("SELECT a.*, u.nome FROM arquivos a JOIN cadastro u ON a.usuario_id = u.usuario_id");
+$sql_query->execute();
+$imgrepositorio = $sql_query->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -157,43 +210,4 @@ width: 60px;
 
 
 
-
-
-
- <?php
-include("../service/conexao.php");
-
-if (isset($_FILES['imgrepositorio'])) {
-    $imgrepositorio = $_FILES['imgrepositorio'];
-    $legenda = $_POST['legenda'];
-    if($imgrepositorio['error'])
-        die("Falha ao enviar");
-
-    if($imgrepositorio['size'] > 2097152)
-        die("Arquivo muito grande");
-
-    echo "arquivo enviado";
-    $pasta = "imgrepositorio/";
-    $nomeDoArquivo = $imgrepositorio['name'];
-    $novoNomeDoArquivo = uniqid();
-    $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));
-
-    if($extensao != "jpg" && $extensao != 'png')
-        die("Formato de arquivo não permitido");
-
-    $path = $pasta . $novoNomeDoArquivo . "." . $extensao;
-    $deu_certo = move_uploaded_file($imgrepositorio["tmp_name"], $path);
-    
-    if($deu_certo) {
-        $conn->query("INSERT INTO arquivos (nome, path, legenda) VALUES('$nomeDoArquivo', '$path', '$legenda')") or die ($mysqli->error);
-        echo "<p>Arquivo movido com sucesso</p>"; 
-    } else {
-        echo "<p>Falha ao mover o arquivo</p>";
-    }
-}
-
-$sql_query = $conn->prepare("SELECT * FROM arquivos");
-$sql_query->execute();
-$imgrepositorio = $sql_query->fetchAll(PDO::FETCH_ASSOC);
-?> 
 

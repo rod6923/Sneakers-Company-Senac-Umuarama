@@ -1,3 +1,12 @@
+<?php
+session_start(); 
+if (!isset($_SESSION['usuario_id'])) {
+    header('Location: login.php');
+    exit; 
+}
+
+
+?>
 
   
   <!DOCTYPE html>
@@ -65,7 +74,7 @@ border-color: #dc4c64;
 border: 2px solid;
   } 
   .text-red{
-      color:#dc4c64;!important
+      color:#dc4c64;
     }
   </style>
 
@@ -77,6 +86,39 @@ border: 2px solid;
   </div>
   <?php include 'navbar4.php';
   ?>
+
+  <!-- Modal de saudação -->
+<?php if (isset($_SESSION['usuario_id'])): ?>
+  <div class="modal fade" id="saudacaoModal" tabindex="-1" aria-labelledby="saudacaoModalLabel" aria-hidden="true">
+    <div class="modal-dialog"style="border: none;" >
+      <div class="modal-content bg-danger text-white"style="border: none;" >
+        <div class="modal-header"style="border: none;" >
+          <h5 class="modal-title" style="border: none;" id="saudacaoModalLabel">Olá, <?php echo $_SESSION['nome']; ?>!</h5>
+          <button type="button" style="border: none;" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body"style="border: none;" >
+          Bem-vindo de volta à Sneakers Company! Aproveite sua navegação.
+        </div>
+        <div class="modal-footer"style="border: none;" >
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<?php endif; ?>
+<script>
+  // Verifica se o modal precisa ser exibido (se o usuário está logado)
+  document.addEventListener("DOMContentLoaded", function() {
+    <?php if (isset($_SESSION['usuario_id'])): ?>
+      // Exibe o modal de saudação quando o usuário estiver logado
+      var myModal = new bootstrap.Modal(document.getElementById('saudacaoModal'), {
+        keyboard: false // Impede que o modal seja fechado com o teclado
+      });
+      myModal.show(); // Exibe o modal
+    <?php endif; ?>
+  });
+</script>
+
     
   <!--Carrossel-->
   <div class="w-100 overflow-hidden bg-light" id="top">
@@ -207,13 +249,26 @@ $imgrepositorio = $sql_query->fetchAll(PDO::FETCH_ASSOC);
     </style>
 </head>
 <body>
+<?php
+// Supondo que você tenha a tabela 'cadastro' com 'id' e 'nome' do usuário
+$sql_query = $conn->prepare("
+    SELECT arquivos.id, arquivos.nome AS nome_arquivo, arquivos.path, arquivos.legenda, cadastro.nome AS nome_usuario
+    FROM arquivos
+    JOIN cadastro ON arquivos.usuario_id = cadastro.usuario_id
+");
+$sql_query->execute();
+$imgrepositorio = $sql_query->fetchAll(PDO::FETCH_ASSOC);
+?>
 
 <div class="carousel-container">
     <div class="carousel" id="carousel" data-aos="fade-up">
         <?php foreach ($imgrepositorio as $post): ?>
             <div class="post" id="post-<?php echo $post['id']; ?>">
-                <img src="<?php echo htmlspecialchars($post['path']); ?>" alt="<?php echo htmlspecialchars($post['nome']); ?>">
-                <div class="caption"><?php echo htmlspecialchars($post['legenda']); ?></div>
+                <img src="<?php echo htmlspecialchars($post['path']); ?>" alt="<?php echo htmlspecialchars($post['nome_arquivo']); ?>">
+                <div class="caption">
+                    <p><strong><?php echo htmlspecialchars($post['nome_usuario']); ?></strong></p> <!-- Nome do usuário -->
+                    <p><?php echo htmlspecialchars($post['legenda']); ?></p> <!-- Legenda do post -->
+                </div>
             </div>
         <?php endforeach; ?>
     </div>
@@ -245,9 +300,8 @@ $imgrepositorio = $sql_query->fetchAll(PDO::FETCH_ASSOC);
     }
 </script>
 
-</body>
-</html>
-      
+
+
   <!-- Section-->
 
   <section class="py-5 bg-light"  data-aos="fade-up">

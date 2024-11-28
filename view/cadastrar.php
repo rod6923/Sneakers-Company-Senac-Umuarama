@@ -2,34 +2,38 @@
 session_start();
 include("../service/conexao.php");
 
-$nome =  trim($_POST["nome"]);
-$email  =  trim($_POST["email"]);
-$senha =  trim($_POST["senha"]);
+$nome = trim($_POST["nome"]);
+$sobrenome = trim($_POST["sobrenome"]);
+$email = trim($_POST["email"]);
+$senha = trim($_POST["senha"]);
 
-
-$sql = " SELECT * FROM cadastro WHERE email = '$email'";
-// $sql_code = "SELECT * FROM cadastro WHERE email = '$email' AND senha = '$senha'";
+$sql = "SELECT * FROM cadastro WHERE email = :email";
 $result = $conn->prepare($sql);
-$row = $result->execute();
-$test = $row->fetchAll(PDO::FETCH_ASSOC);   
+$result->bindParam(':email', $email);
+$result->execute();
+$test = $result->fetchAll(PDO::FETCH_ASSOC);   
 
 print_r($test);
 
-if($row == 1) {
-$_SESSION['usuario_existe'] = true;
-// header('Location: cadastro.php');
-exit;
+if (count($test) > 0) { // Verifica se o email já existe
+    $_SESSION['usuario_existe'] = true;
+    // header('Location: cadastro.php');
+    exit;
 }
 
-$sql = "INSERT INTO cadastro (nome, email, senha, senhaconfirm) VALUES ('$nome', '$email', '$senha', '$senhaconfirm', NOW())";
+$sql = "INSERT INTO cadastro (nome, sobrenome, email, senha) VALUES (:nome, :sobrenome, :email, :senha)";
+$result = $conn->prepare($sql);
+$result->bindParam(':nome', $nome);
+$result->bindParam(':sobrenome', $sobrenome);
+$result->bindParam(':email', $email);
+$result->bindParam(':senha', $senha);
 
-if(conexao->query($sql) === TRUE) {
+if ($result->execute()) {
     $_SESSION['status_cadastro'] = true;
 }
 
-$conexao->close();
+$conn = null; // Fecha a conexão com o banco
 
-header('Location: cadastro.php');
+header('Location: login.php');
 exit;
-
 ?>

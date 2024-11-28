@@ -1,46 +1,52 @@
 <?php
+session_start(); // Inicia a sessão
 include("../service/conexao.php");
 
-if(isset($_POST['email']) || isset($_POST['senha'])) {
-  if(strlen($_POST['email']) == 0) {
-    echo "Preencha seu e-mail";
-  } else if(strlen($_POST['senha']) == 0) {
-    echo "Preencha sua senha";
-  } else {
-    $email = ($_POST['email']);
-    $senha = ($_POST['senha']);
-
-    $sql_code = "SELECT * FROM cadastro WHERE email = '$email' AND senha = '$senha'";
-    $sql_query = $conn->prepare($sql_code);
-    $sql_query->execute();
-    $quantidade = $sql_query->rowCount();
-
-
-    if($quantidade == 1) {
-
-      $cadastro = $sql_query->fetchAll(PDO::FETCH_ASSOC);
-  
-      if(!isset($_SESSION)) {
-     session_start();
-
-
-      }
-
-    $_SESSION['id'] = $cadastro['id'];
-    $_SESSION['nome'] = $cadastro['nome'];
-
-    header('Location: index2.php');
-
-
+if (isset($_POST['email']) && isset($_POST['senha'])) {
+    // Verifica se o e-mail ou senha estão vazios
+    if (strlen($_POST['email']) == 0) {
+        echo "Preencha seu e-mail";
+    } else if (strlen($_POST['senha']) == 0) {
+        echo "Preencha sua senha";
     } else {
-       echo "Falha ao logar! E-mail ou senha incorretos";
-       
+        // Limpa o e-mail e a senha para evitar problemas com espaços extras
+        $email = trim($_POST['email']);
+        $senha = trim($_POST['senha']);
+
+        // Usando prepared statements para evitar SQL Injection
+        $sql_code = "SELECT * FROM cadastro WHERE email = :email AND senha = :senha";
+        $stmt = $conn->prepare($sql_code);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':senha', $senha);
+
+        $stmt->execute();
+
+        // Verifica se o usuário foi encontrado
+        if ($stmt->rowCount() == 1) {
+            // Pega o primeiro registro encontrado
+            $cadastro = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            // Exibe as variáveis de sessão para depuração (verifica se estão corretamente definidas)
+            var_dump($cadastro); // Depuração: mostre os dados retornados
+
+            // Armazena os dados do usuário na sessão
+            $_SESSION['usuario_id'] = $cadastro['usuario_id']; // Usando 'usuario_id' no lugar de 'id'
+            $_SESSION['nome'] = $cadastro['nome'];
+
+            // Redireciona para a página de boas-vindas (index2.php)
+            header('Location: index2.php');
+            exit; // Garantir que o código não continue após o redirecionamento
+        } else {
+            echo "Falha ao logar! E-mail ou senha incorretos";
+        }
     }
-
-  }
 }
-
 ?>
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -152,13 +158,13 @@ rel="stylesheet"
   
                 <!-- Email input -->
                 <div class="relative z-0">
-                  <input type="email" id="email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-red-500 focus:outline-none focus:ring-0 focus:border-red-600 peer" placeholder=" " />
+                  <input type="email" id="email" name="email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-red-500 focus:outline-none focus:ring-0 focus:border-red-600 peer" placeholder=" " />
                   <label for="email" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-red-600 peer-focus:dark:text-red-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Email</label>
               </div>
   
                 <!-- Password input -->
                 <div class="relative z-0 my-4">
-                  <input type="password" id="senha" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-red-300 appearance-none dark:text-white dark:border-red-600 dark:focus:border-red-500 focus:outline-none focus:ring-0 focus:border-red-600 peer" placeholder=" " />
+                  <input type="password" name="senha" id="senha" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-red-300 appearance-none dark:text-white dark:border-red-600 dark:focus:border-red-500 focus:outline-none focus:ring-0 focus:border-red-600 peer" placeholder=" " />
                   <label for="senha" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-red-400 peer-focus:dark:text-red-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Senha</label>
               </div>
   
