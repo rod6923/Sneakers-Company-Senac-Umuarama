@@ -1,7 +1,46 @@
+<?php
+include("../service/conexao.php");
+
+if(isset($_POST['email']) || isset($_POST['senha'])) {
+  if(strlen($_POST['email']) == 0) {
+    echo "Preencha seu e-mail";
+  } else if(strlen($_POST['senha']) == 0) {
+    echo "Preencha sua senha";
+  } else {
+    $email = ($_POST['email']);
+    $senha = ($_POST['senha']);
+
+    $sql_code = "SELECT * FROM cadastro WHERE email = '$email' AND senha = '$senha'";
+    $sql_query = $conn->prepare($sql_code);
+    $sql_query->execute();
+    $quantidade = $sql_query->rowCount();
 
 
+    if($quantidade == 1) {
+
+      $cadastro = $sql_query->fetchAll(PDO::FETCH_ASSOC);
+  
+      if(!isset($_SESSION)) {
+     session_start();
 
 
+      }
+
+    $_SESSION['id'] = $cadastro['id'];
+    $_SESSION['nome'] = $cadastro['nome'];
+
+    header('Location: index2.php');
+
+
+    } else {
+       echo "Falha ao logar! E-mail ou senha incorretos";
+       
+    }
+
+  }
+}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -108,7 +147,7 @@ rel="stylesheet"
   
           <div class="card bg-glass" style="margin-top: 50px;">
             <div class="card-body px-4 py-5 px-md-5">
-              <form >
+              <form method="POST">
                
   
                 <!-- Email input -->
@@ -123,7 +162,12 @@ rel="stylesheet"
                   <label for="senha" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-red-400 peer-focus:dark:text-red-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">Senha</label>
               </div>
   
-                
+              <?php 
+    if (isset($_SESSION['login_erro'])) {
+        echo "<p style='color:red;'>Email ou senha incorretos!</p>";
+        unset($_SESSION['login_erro']); 
+    }
+    ?>
   
                 <!-- Submit button -->
                 <button type="submit" class="btn bg-red-500 btn-block mb-4" onclick="login(); return false">

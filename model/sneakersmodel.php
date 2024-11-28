@@ -1,10 +1,10 @@
 <?php
-    require "../conexao.php";
+    require "../service/conexao.php";
 
-    function insertsneakerscompany($nome, $email, $senha, $senhaconfirm){
+    function insertcadastro($nome, $sobrenome, $email, $senha){
         global $conn;
         try {
-            $stmt = $conn->prepare("INSERT INTO `sneakerscompany`
+            $stmt = $conn->prepare("INSERT INTO `cadastro`
     (`nome`, `sobrenome`, `email`, `senha)
             VALUES (\"$nome\" , \"$sobrenome\", \"$email\", \"$senha\")");
             $stmt->execute();
